@@ -62,6 +62,8 @@ stdenv.mkDerivation rec {
   '';
 
   passthru = { inherit guile; };
+  
+  guixpath = "$out";
 
   meta = with lib; {
     description =
