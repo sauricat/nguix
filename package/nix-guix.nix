@@ -1,7 +1,7 @@
 { stdenv, pkgs, lib, fetchurl, pkg-config, makeWrapper, zlib, bzip2, guile
 , guilePackages, storeDir ? null, stateDir ? null }:
 
-runCommand "nixos-guix-symlink" { } 
+runCommand "nixos-guix" { } 
   ''
     mkdir -p $out/bin
     ln -s ${guix}/bin/guix $out/bin/nguix
