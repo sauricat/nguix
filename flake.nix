@@ -15,6 +15,7 @@
         let guilePackages = prev.callPackages ./guile { };
         in rec {
           guix = prev.callPackage ./package { inherit guilePackages; };
+          nixos-guix = prev.callPackage ./package/nix-guix.nix { inherit guilePackages;};
           inherit (guilePackages)
             guile-gnutls guile-gcrypt guile-git guile-json guile-sqlite3
             guile-ssh;
